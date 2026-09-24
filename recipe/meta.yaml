@@ -33,6 +33,7 @@ requirements:
     - gnuconfig  # [unix]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
+    - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
     - {{ mpi }}  # [mpi != 'nompi']
     - make  # [unix]

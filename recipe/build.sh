@@ -26,6 +26,7 @@ fi
 ../configure \
   CC=$CC \
   FC=$FC \
+  CXX=$CXX \
   CFLAGS="$CFLAGS -O3 -ffast-math -funroll-loops" \
   LCFLAGS="$CFLAGS -O3 -ffast-math -funroll-loops" \
   ${configure_args[@]} || (cat config.log && false)
