@@ -8,6 +8,9 @@ if [[ x"$mpi" != x"nompi" ]]; then
   if [[ "${target_platform}" == osx-arm64 ]]; then
     export CC=$BUILD_PREFIX/bin/mpicc
     export FC=$BUILD_PREFIX/bin/mpifort
+  elif [[ "${CONDA_BUILD_CROSS_COMPILATION:-0}" == "1" ]]; then
+    export CC=$PREFIX/bin/mpicc
+    export FC=$PREFIX/bin/mpifort
   else
     export CC=mpicc
     export FC=mpifort
